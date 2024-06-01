@@ -6,23 +6,22 @@
 	<title>Document</title>
 </head>
 <body>
-	<canvas id="myCanvas" width="800" height="800"
-style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
-<script>
-let c = document.getElementById("myCanvas");
-let cxt =c.getContext("2d");
-cxt.beginPath();
-cxt.arc(400, 400, 100,0*Math.PI, true);
-cxt.closePath();
-cxt.lineWidth = 15;
-cxt.strokeStyle = "orange";
-cxt.fillStyle = "red";
-cxt.fill();
-cxt.stroke();
-
+	<canvas id="myCanvas" width="800" height="800" style="border:1px solid #d3d3d3;">Your browser does not support the HTML5</canvas> 
+    <script>
+        let user =+prompt("Скільки ви хочете квадратів?","")
+        
+        let c = document.getElementById("myCanvas");
+        let cxt =c.getContext("2d");
+        for(let i=0; i<user; i++){
+            let randx = Math.floor(Math.random()*(700+1-0)+0)
+            let randy = Math.floor(Math.random()*(700+1-0)+0)
+            let rands = Math.floor(Math.random()*(700+1-10)+10)
+            cxt.strokeStyle = "red";
+            cxt.sillStyle = "blue";
+            cxt.lineWidth = 6;
+            cxt.strokeRect(randx, randy, rands, rands);
+            cxt.fillRect(randx, randy, rands, rands);
+        }
 </script>
-
-
 </body>
 </html>
